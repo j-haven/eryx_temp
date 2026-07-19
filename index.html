@@ -9,6 +9,16 @@
           content="Eryx Digital helps executives, business owners and organizations make better business decisions through analytics, reporting, financial insight and process improvement." />
     <meta name="keywords" content="put, your, keywords, here">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo.png" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Oswald:wght@200;300;400;500;600;700&family=Shadows+Into+Light+Two&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+          rel="stylesheet">
+          
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/main.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
@@ -31,84 +41,97 @@
       </form>
     </div>
     <!-- search pop up end -->
-   
-<header class="site-header">
-
-  <!-- ============================================================
+    <header class="site-header">
+      <!-- ============================================================
        NAVBAR COMPONENT — reusable, no dependency on hero markup
-  ============================================================= -->
-
-  <!-- desktop nav -->
-  <nav class="top-nav container">
-    <a class="navbar-brand" href="index.html">
-      <div class="d-flex align-items-center gap-3">
-        <img src="assets/img/logo.png"
-             class="img-fluid rounded-circle logo"
-             alt="Eryx Digital Logo" height="" width="">
-        <p class="mb-0 fw-semibold brand-name">Eryx Digital</p>
+============================================================= -->
+      <!-- desktop nav -->
+      <nav class="top-nav container d-none d-md-flex">
+        <a class="navbar-brand" href="index.html">
+          <div class="d-flex align-items-center gap-3">
+            <img src="assets/img/logo.png"
+                 class="img-fluid rounded-circle logo"
+                 alt="Eryx Digital Logo"
+                 height=""
+                 width="">
+            <p class="mb-0 fw-semibold brand-name">Eryx Digital</p>
+          </div>
+        </a>
+        <ul class="top-nav__links">
+          <li>
+            <a href="#" class="is-active">Home</a>
+          </li>
+          <li>
+            <a href="#">Solutions</a>
+          </li>
+          <li>
+            <a href="#case-studies">Case Studies</a>
+          </li>
+          <li>
+            <a href="#company">Contact</a>
+          </li>
+          <button class="search-toggle-btn searchBoxToggler"
+                  type="button"
+                  aria-label="Open search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </ul>
+      </nav>
+      <!-- mobile brand bar -->
+      <div class="mobile-logo-bar d-flex d-md-none justify-content-between align-items-center">
+        <a class="navbar-brand" href="index.html">
+          <div class="d-flex align-items-center gap-3">
+            <img src="assets/img/logo.png"
+                 class="img-fluid rounded-circle logo"
+                 alt="Eryx Digital Logo"
+                 height=""
+                 width="">
+            <p class="mb-0 fw-semibold brand-name">Eryx Digital</p>
+          </div>
+        </a>
+        <button class="search-toggle-btn searchBoxToggler"
+                type="button"
+                aria-label="Open search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
       </div>
-    </a>
-    <ul class="top-nav__links">
-      <li><a href="#" class="is-active">Home</a></li>
-      <li><a href="#">Solutions</a></li>
-      <li><a href="#case-studies">Case Studies</a></li>
-      <li><a href="#company">Contact</a></li>
-      <button class="search-toggle-btn searchBoxToggler" type="button" aria-label="Open search">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </button>
-    </ul>
-  </nav>
-
-  <!-- mobile brand bar -->
-  <div class="mobile-logo-bar d-flex justify-content-between align-items-center">
-    <a class="navbar-brand" href="index.html">
-      <div class="d-flex align-items-center gap-3">
-        <img src="assets/img/logo.png"
-             class="img-fluid rounded-circle logo"
-             alt="Eryx Digital Logo" height="" width="">
-        <p class="mb-0 fw-semibold brand-name">Eryx Digital</p>
-      </div>
-    </a>
-    <button class="search-toggle-btn searchBoxToggler" type="button" aria-label="Open search">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </button>
-  </div>
-
-  <!-- ============================================================
+      <!-- ============================================================
        HERO COMPONENT — self-contained, unaware of the nav above it
   ============================================================= -->
-  <section id="home-hero" class="hero">
-    <div class="hero-media">
-      <video src="assets/vid/hero_bg.mp4" autoplay muted loop playsinline></video>
-    </div>
-
-    <div class="hero-fade"></div>
-    <div class="hero-vignette"></div>
-
-    <div class="hero-content container graph_bg graph_bg--inset-xsm">
-      <span class="eyebrow">AI-Powered</span>
-      <h1>
-        <span>Web & Data</span>
-        <span>solutions.</span>
-      </h1>
-      <p class="sub">
-        Data-driven strategy and intelligent execution that consistently
-        outperforms, captures attention, and drives measurable conversions.
-      </p>
-      <a href="#" class="cta">Get a quote</a>
-    </div>
-  </section>
-
-  <!-- mobile bottom nav — already independent, unchanged -->
-  <nav class="bottom-nav">
-    <a href="#" class="bottom-nav__item is-active"><span>Home</span></a>
-    <a href="#solutions" class="bottom-nav__item"><span>Solutions</span></a>
-    <a href="#case-studies" class="bottom-nav__item"><span>Case Studies</span></a>
-    <a href="#company" class="bottom-nav__item"><span>Contact</span></a>
-  </nav>
-
-</header>
-
+      <section id="home-hero" class="hero">
+        <div class="hero-media">
+          <video src="assets/vid/hero_bg.mp4"
+                 poster="assets/img/hero_poster.png"
+                 preload="auto"
+                 autoplay
+                 muted
+                 loop
+                 playsinline>
+          </video>
+        </div>
+        <div class="hero-fade"></div>
+        <div class="hero-vignette"></div>
+        <div class="hero-content container graph_bg graph_bg--inset-xsm">
+          <span class="eyebrow">AI-Powered</span>
+          <h1>
+            <span>Web & Data</span>
+            <span>solutions.</span>
+          </h1>
+          <p class="sub">
+            Data-driven strategy and intelligent execution that consistently
+            outperforms, captures attention, and drives measurable conversions.
+          </p>
+          <a href="#" class="cta">Get a quote</a>
+        </div>
+      </section>
+      <!-- mobile bottom nav — already independent, unchanged -->
+      <nav class="bottom-nav">
+        <a href="#" class="bottom-nav__item is-active"><span>Home</span></a>
+        <a href="#solutions" class="bottom-nav__item"><span>Solutions</span></a>
+        <a href="#case-studies" class="bottom-nav__item"><span>Case Studies</span></a>
+        <a href="#company" class="bottom-nav__item"><span>Contact</span></a>
+      </nav>
+    </header>
     <!-- about -->
     <section id="about" class="about-sec">
       <div class="container">
@@ -544,7 +567,6 @@
                   <i class="fa-brands fa-instagram"></i>
                 </a>
               </div>
-             
             </div>
           </div>
           <div class="col-lg-6">
@@ -594,14 +616,12 @@
                       <a href="mailto:eryxdigital360@gmail.com"><i class="fa fa-envelope-open"></i> eryxdigital360@gmail.com</a>
                     </li>
                   </ul>
-                  
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
       <!-- {# djlint:off #} -->
       <div class="footer-bottom">
         <div class="container footer-bottom__inner">

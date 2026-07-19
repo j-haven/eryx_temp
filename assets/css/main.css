@@ -1,10 +1,3 @@
-@import url('https://googleapis.com');
-@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Oswald:wght@200;300;400;500;600;700&family=Shadows+Into+Light+Two&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap");
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-
-
-
 :root {
     --theme-color: #000D21;
     --theme-color-rgb: 0, 13, 33;
@@ -273,6 +266,7 @@ h6 {
     position: static;
     flex: 1;
     min-height: 0;
+    max-height: 900px;
 }
 
 
@@ -426,7 +420,7 @@ h6 {
 .top-nav {
     position: relative;
     z-index: 5;
-    display: none;
+
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
@@ -475,12 +469,6 @@ ul.top-nav__links {
 
 /* bottom nav, unchanged */
 .bottom-nav {
-    display: none;
-}
-
-
-
-.mobile-logo-bar {
     display: none;
 }
 
@@ -574,15 +562,7 @@ ul.top-nav__links {
         transform: translateY(100%);
     }
 
-    /* hiding the bottom nav end */
 
-
-
-
-    .mobile-logo-bar .navbar-brand {
-        display: block;
-
-    }
 
     .mobile-logo-bar {
         display: block;
@@ -602,9 +582,7 @@ ul.top-nav__links {
 }
 
 @media (min-width: 768px) {
-    .top-nav {
-        display: flex;
-    }
+
 
     #home-hero .hero-content {
         margin-top: -50px;

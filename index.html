@@ -97,9 +97,12 @@
       <!-- ============================================================
        HERO COMPONENT — self-contained, unaware of the nav above it
   ============================================================= -->
-      <section id="home-hero" class="hero">
+      <!-- {# djlint:off #} -->
+      <section id="home-hero"
+               class="hero"
+               style="background: var(--theme-color) url('assets/img/fallback.webp') center/cover no-repeat">
+        <!-- {# djlint:on #} -->
         <div class="hero-media">
-          
           <video poster="assets/img/fallback.webp"
                  preload="auto"
                  autoplay

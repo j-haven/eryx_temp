@@ -65,3 +65,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
+
+// contact form
+(function () {
+    const wrap = document.getElementById('interestSelect');
+    if (!wrap) return;
+
+    const toggle = wrap.querySelector('.form-multiselect__toggle');
+    const toggleText = wrap.querySelector('.form-multiselect__toggle-text');
+    const panel = wrap.querySelector('.form-multiselect__panel');
+    const checkboxes = wrap.querySelectorAll('input[type="checkbox"]');
+
+    function updateLabel() {
+        const checked = Array.from(checkboxes).filter(c => c.checked).map(c => c.value);
+        if (checked.length === 0) {
+            toggleText.textContent = 'Select your interests';
+        } else if (checked.length <= 2) {
+            toggleText.textContent = checked.join(', ');
+        } else {
+            toggleText.textContent = `${checked.length} selected`;
+        }
+    }
+
+    toggle.addEventListener('click', function () {
+        const isOpen = panel.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    checkboxes.forEach(cb => cb.addEventListener('change', updateLabel));
+
+    document.addEventListener('click', function (e) {
+        if (!wrap.contains(e.target)) {
+            panel.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+        }
+    });
+})();

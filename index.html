@@ -42,8 +42,8 @@
     <!-- search pop up end -->
     <header class="site-header">
       <!-- ============================================================
-       NAVBAR COMPONENT — reusable, no dependency on hero markup
-============================================================= -->
+        NAVBAR COMPONENT
+      ============================================================= -->
       <!-- desktop nav -->
       <nav class="top-nav container d-none d-md-flex">
         <a class="navbar-brand" href="index.html">
@@ -94,12 +94,19 @@
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
+       <!-- mobile bottom nav — already independent, unchanged -->
+      <nav class="bottom-nav">
+        <a href="#" class="bottom-nav__item is-active"><span>Home</span></a>
+        <a href="#solutions" class="bottom-nav__item"><span>Solutions</span></a>
+        <a href="#case-studies" class="bottom-nav__item"><span>Case Studies</span></a>
+        <a href="#company" class="bottom-nav__item"><span>Contact</span></a>
+      </nav>
       <!-- ============================================================
-       HERO COMPONENT — self-contained, unaware of the nav above it
-  ============================================================= -->
+        HERO COMPONENT
+      ============================================================= -->
       <!-- {# djlint:off #} -->
       <section id="home-hero"
-        class="hero"
+        class="hero hero--full" 
         style="background: url('assets/img/hero_bg_poster.jpg') center/cover no-repeat">
         <!-- {# djlint:on #} -->
         <div class="hero-media">
@@ -116,26 +123,20 @@
         </div>
         <div class="hero-fade"></div>
         <div class="hero-vignette"></div>
-        <div class="hero-content container graph_bg graph_bg--inset-xsm">
+        <div class="hero-content container graph_bg graph_bg--inset-xsm mx-md-auto text-md-center">
           <span class="eyebrow">AI-Powered</span>
           <h1>
             <span>Web & Data</span>
             <span>solutions.</span>
           </h1>
-          <p class="sub">
+          <p class="sub mx-md-auto text-md-center">
             Data-driven strategy and intelligent execution that consistently
             outperforms, captures attention, and drives measurable conversions.
           </p>
           <a href="#" class="cta">Get a quote</a>
         </div>
       </section>
-      <!-- mobile bottom nav — already independent, unchanged -->
-      <nav class="bottom-nav">
-        <a href="#" class="bottom-nav__item is-active"><span>Home</span></a>
-        <a href="#solutions" class="bottom-nav__item"><span>Solutions</span></a>
-        <a href="#case-studies" class="bottom-nav__item"><span>Case Studies</span></a>
-        <a href="#company" class="bottom-nav__item"><span>Contact</span></a>
-      </nav>
+     
     </header>
     <!-- about -->
     <section id="about" class="about-sec">
@@ -238,7 +239,7 @@
           <span class="eyebrow eyebrow--dark">
             <i class="fa-solid fa-minus"></i> What We Do
           </span>
-          <h2>Services Built To Move The Numbers</h2>
+          <h2>Solutions Built To Scale with You</h2>
           <p class="sub mx-auto">
             From raw data to a finished website, every engagement is scoped
             around one outcome: decisions your team can act on with confidence.
